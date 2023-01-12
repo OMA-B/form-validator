@@ -25,6 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 /* ------------------- container -------------- */
@@ -33,7 +35,6 @@ body {
     position: relative;
     width: 85%;
     max-width: 400px;
-    height: 572px;
     border: 6px solid $primary-color;
     border-radius: 10px;
     box-shadow: 0 5px 25px 10px rgb(0 0 0 / 70%);
@@ -44,8 +45,6 @@ body {
     .form-container {
         width: 100%;
         padding: 20px;
-        position: absolute;
-        top: 0;
         border-radius: 5px;
         transform: translateZ(5px);
         background: #eee;
@@ -113,7 +112,7 @@ body {
 
     input {
         width: 100%;
-        padding: 6px 6px 6px 26px;
+        padding: 6px 6px 6px 30px;
         font-size: 14px;
         border: 2px solid rgb(0 0 0 / 70%);
         border-radius: 5px;
