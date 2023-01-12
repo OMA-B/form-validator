@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* ------------------- varibles -------------- */
+/* ------------------- reset -------------- */
+body, body * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #c9cedc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+/* ------------------- container -------------- */
+.container {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 85%;
+  max-width: 400px;
+  height: 572px;
+  border: 6px solid rgba(51, 89, 194, 0.6392156863);
+  border-radius: 10px;
+  box-shadow: 0 5px 25px 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  transition: all 0.5s;
+  /* ------------------- form container -------------- */
+}
+.container .form-container {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  transform: translateZ(5px);
+  background: #eee;
+}
+.container .form-container .header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.container .form-container .form {
+  width: 100%;
+  /* ------------------- register button -------------- */
+}
+.container .form-container .form .input-container:not(:nth-child(8)) {
+  margin-bottom: 10px;
+}
+.container .form-container .form .register {
+  width: 100%;
+  background: rgba(51, 89, 194, 0.6392156863);
+  font-size: 15px;
+  padding: 10px 0;
+  border-radius: 7px;
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.container .form-container .form .register:hover, .container .form-container .form .register:active {
+  backdrop-filter: brightness(80%);
+}
+.container .form-container .form .register:active {
+  transform: scale(0.9);
+}
+.container .form-container .message {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* -------------- some animation for the overall container ----------- */
+.rotate {
+  animation: rotate 0.5s ease-out forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.input-container label {
+  display: block;
+  margin-bottom: 3px;
+}
+.input-container span {
+  position: relative;
+}
+.input-container input {
+  width: 100%;
+  padding: 6px 6px 6px 26px;
+  font-size: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+.input-container input:valid {
+  border: 2px solid rgb(2, 106, 2);
+}
+.input-container i {
+  position: absolute;
+  top: 2.1px;
+  left: 10px;
+  color: rgba(51, 89, 194, 0.6392156863);
+}
+
+/* ------------------- feedback container -------------- */
+.feedback-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  background: #eee;
+}
+.feedback-container .illustration {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+.feedback-container .illustration img {
+  width: 100%;
+}
+.feedback-container .action-button {
+  margin-top: 20px;
+}
+.feedback-container .action-button .retry {
+  width: 130px;
+  background: rgba(51, 89, 194, 0.6392156863);
+  font-size: 15px;
+  padding: 12px 0;
+  border-radius: 7px;
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.feedback-container .action-button .retry:hover, .feedback-container .action-button .retry:active {
+  backdrop-filter: brightness(80%);
+}
+.feedback-container .action-button .retry:active {
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/form.css">
+    <title>Form Validator</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+            <h1 class="header">Sign Up Today!</h1>
+            <form class="form">
+                <!-- full name -->
+                <div class="input-container">
+                    <label for="name" class="name">Full Name</label>
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" required name="name" placeholder="Firstname Lastname" minlength="3" maxlength="100">
+                    </span>
+                </div>
+                <!-- phone number -->
+                <div class="input-container">
+                    <label for="phone" class="phone">Phone Number</label>
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="phone" required name="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </span>
+                </div>
+                <!-- email address -->
+                <div class="input-container">
+                    <label for="email" class="email">Email Address</label>
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" required name="email" placeholder="email@address.com">
+                    </span>
+                </div>
+                <!-- Website URL -->
+                <div class="input-container">
+                    <label for="website" class="website">Website URL</label>
+                    <span>
+                        <i class="fa-solid fa-globe"></i>
+                        <input type="url" id="website" required name="website" placeholder="http://website.com">
+                    </span>
+                </div>
+                <!-- Password -->
+                <div class="input-container">
+                    <label for="password" class="password">Password</label>
+                    <span>
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="password" required placeholder="Create Password (Min. 8 characters)" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="At least 1 uppercase letter, 1 lowercase letter and a number!">
+                    </span>
+                </div>
+                <!-- Confirm Password -->
+                <div class="input-container">
+                    <label for="confirm-password" class="confirm-password">Confirm Password</label>
+                    <span>
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="confirm-password" required name="password" placeholder="Confirm Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                    </span>
+                </div>
+                <!-- Submit button -->
+                <button class="register">Register</button>
+                <span class="message">Don't Hesitate!</span>
+            </form>
+        </div>
+
+        <div class="feedback-container">
+            <div class="feedback-display">
+                <div class="illustration">
+                    <img src="assets/favicon.png" alt="">
+                </div>
+                <span class="message">Successfully Registered!</span>
+            </div>
+            <div class="action-button">
+                <button class="retry">OK!</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

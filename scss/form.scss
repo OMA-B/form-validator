@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* ------------------- varibles -------------- */
+$primary-color: #3359c2a3;
+$bg-color: #c9cedc;
+$error: rgb(216, 8, 8);
+$success: rgb(2, 106, 2);
+
+/* ------------------- reset -------------- */
+body, body * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+/* ------------------- container -------------- */
+.container {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 85%;
+    max-width: 400px;
+    height: 572px;
+    border: 6px solid $primary-color;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px 10px rgb(0 0 0 / 70%);
+    display: flex;
+    transition: all 0.5s;
+
+    /* ------------------- form container -------------- */
+    .form-container {
+        width: 100%;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        border-radius: 5px;
+        transform: translateZ(5px);
+        background: #eee;
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .form {
+            width: 100%;
+
+            .input-container:not(:nth-child(8)) { margin-bottom: 10px; }
+
+            /* ------------------- register button -------------- */
+            .register {
+                width: 100%;
+                background: $primary-color;
+                font-size: 15px;
+                padding: 10px 0;
+                border-radius: 7px;
+                color: white;
+                letter-spacing: 2px;
+                cursor: pointer;
+
+                &:hover, &:active { backdrop-filter: brightness(80%); }
+
+                &:active { transform: scale(0.9); }
+            }
+        }
+
+        .message {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: 2px solid rgb(0 0 0 / 70%);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}
+
+/* -------------- some animation for the overall container ----------- */
+.rotate { animation: rotate 0.5s ease-out forwards; }
+
+@keyframes rotate {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(180deg); }
+}
+
+// @keyframes return {
+//     from { transform: rotateY(180deg); }
+//     to { transform: rotateY(0); }
+// }
+
+.input-container {
+    label {
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    span { position: relative; }
+
+    input {
+        width: 100%;
+        padding: 6px 6px 6px 26px;
+        font-size: 14px;
+        border: 2px solid rgb(0 0 0 / 70%);
+        border-radius: 5px;
+
+        &:valid {
+            border: 2px solid $success;
+        }
+    }
+
+    i {
+        position: absolute;
+        top: 2.1px;
+        left: 10px;
+        color: $primary-color;
+    }
+}
+
+@import 'confirm';
