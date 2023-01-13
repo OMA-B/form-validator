@@ -2,7 +2,7 @@
 
 This is quite some project to build my knowledge on how to:
 
-~ make an nice form UI
+~ make an nice form UI, using SASS/SCSS
 
 ~ make cool and smooth animation effects, with video implentation
 
