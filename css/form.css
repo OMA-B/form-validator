@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   letter-spacing: 2px;
+}
+body .perspective {
   perspective: 1000px;
   transform-style: preserve-3d;
 }
@@ -109,7 +111,7 @@ body {
   border-radius: 5px;
 }
 .input-container input:valid {
-  border: 2px solid rgb(2, 106, 2);
+  border: 2px solid rgb(9, 178, 9);
 }
 .input-container i {
   position: absolute;
@@ -129,22 +131,27 @@ body {
   align-items: center;
   border-radius: 5px;
   transform: rotateY(180deg);
-  background: #eee;
+  background: #fff;
 }
 .feedback-container .illustration {
-  width: 120px;
+  width: 250px;
   height: 120px;
   margin: 0 auto 20px;
 }
-.feedback-container .illustration img {
+.feedback-container .illustration video {
   width: 100%;
+}
+.feedback-container .message {
+  font-size: 14px;
+  color: rgb(9, 178, 9);
+  text-align: center;
 }
 .feedback-container .action-button {
   margin-top: 20px;
 }
-.feedback-container .action-button .retry {
+.feedback-container .action-button .owkae {
   width: 130px;
-  background: rgba(51, 89, 194, 0.6392156863);
+  background: rgb(9, 178, 9);
   font-size: 15px;
   padding: 12px 0;
   border-radius: 7px;
@@ -152,10 +159,10 @@ body {
   letter-spacing: 2px;
   cursor: pointer;
 }
-.feedback-container .action-button .retry:hover, .feedback-container .action-button .retry:active {
+.feedback-container .action-button .owkae:hover, .feedback-container .action-button .owkae:active {
   backdrop-filter: brightness(80%);
 }
-.feedback-container .action-button .retry:active {
+.feedback-container .action-button .owkae:active {
   transform: scale(0.9);
 }
 
