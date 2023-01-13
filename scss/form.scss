@@ -12,6 +12,7 @@ body, body * {
     padding: 0;
     outline: none;
     border: none;
+    text-decoration: none;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -129,3 +130,25 @@ body {
 }
 
 @import 'confirm';
+
+
+/* ------------ Coder ----------- */
+.coded-by {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(255 255 255/ 90%);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.coded-by i, .coded-by a { 
+    color: #d31003;
+    font-weight: bold; 
+}
+
+.coded-by a:hover, .coded-by a:active { 
+    text-decoration: underline;
+    color: rgb(255 255 255/ 90%);
+}

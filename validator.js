@@ -74,7 +74,6 @@ const save_user_data = () => {
         body.classList.add('perspective');
         form.parentElement.parentElement.classList.add('rotate');
         check_mark.play();
-        // setTimeout(() => { check_mark.pause(); }, 2000);
     }
 }
 
@@ -99,5 +98,4 @@ owkae.addEventListener('click', () => {
     // flip back over
     body.classList.remove('perspective');
     form.parentElement.parentElement.classList.remove('rotate');
-    // check_mark.load();
 })
